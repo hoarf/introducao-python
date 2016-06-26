@@ -7,6 +7,7 @@
 - [ ] Esse aqui é o *[[https://matehackers.org]]*!
 - [ ] Feedback apreciado. Bônus points for meanies.
 - [ ] Pra aprender é necessário quase saber!
+
 *** TODO Um breve devaneio sobre a linha de comando [0/3]
 - [ ] Texto é a melhor interface.
   1. Eficiente
@@ -15,8 +16,41 @@
 
 - [ ] Comandos básicos
   1. *cd*: "change directory" - troca o diretório atual
-  2. *mkdir*: "make directory" - cria um novo diretório
-  3. *pwd*: "print working directory" - mostra o diretório atual
+  2. *ls:* "list" - lista o conteúdo do diretório
+  3. *mkdir*: "make directory" - cria um novo diretório
+  4. *pwd*: "print working directory" - mostra o diretório atual
+
+- [ ] Novos apelidos para velhos amigos
+  1. Você pode chamar o =diretório atual= de =.=
+  2. Você pode chamar o =diretório acima do autal= de =..=
+  3. Você pode chamar o diretório =/home/<SEU NOME DE USUÁRIO= de =~=
+  4. Você pode chamar o =diretório raíz= de =/=. Todos os outros
+     diretórios estão abaixo dele.
+
+- Exemplos:
+
+  #+BEGIN_SRC sh
+  ls ~
+  #+END_SRC
+
+  #+RESULTS:
+  | bin              |
+  | docs             |
+  | mnt              |
+  | music            |
+  | pics             |
+  | src              |
+  | texmf            |
+  | tp-src           |
+  | virtual-machines |
+
+  #+BEGIN_SRC sh
+  ls .
+  #+END_SRC
+
+  #+RESULTS:
+  | arquivo.txt          |
+  | primeiros_passos.org |
 
 - [ ] Exercício:
   - Criar um diretório no pasta *home* do seu usuário chamada
@@ -35,16 +69,16 @@
    - Modificando o arquivo.txt: *import this*
 
  - [ ] Renomeando o *arquivo.txt* para *programa.py*
-   1. *mv*: "move" - move ou renomeia arquivos
+   1. *MV*: "move" - move ou renomeia arquivos
 
- - [ ] O seu primeiro comando em python: *print()*
-   + print("Hello World")
+ - [ ] O seu primeiro comando em python: =print()=
+   + =print("Hello World")=
 
  - [ ] Exercício:
-   - Modificar o programa.py e deixar somente a linha: print("Hello World")
+   - Modificar o programa.py e deixar somente a linha: =print("Hello World")=
 
 *** TODO Fazendo de conta?
- - Operações aritiméticas
+ - Operações aritméticas
 
 *** TODO Lembrando o passado.
  - Uso de variáveis e memória.
@@ -73,6 +107,6 @@
 *** TODO Isso aqui já não é uma lista?
  - Listas e Dicionários
 
-*** TODO Eu me indentifico como um objeto.
+*** TODO Eu me identifico como um objeto.
  - Princípios da Orientação a
 *** TODO Vai planeta
