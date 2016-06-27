@@ -1,112 +1,150 @@
+#+TITLE:  Primeiros Passos em Python
+#+AUTHOR: Alan Ficagna
+#+EMAIL:  alan.ficagna@gmail.com
+#+DATE:   2016 Jun 26
+#+TAGS: apresentação
+
 * Os primeiros passos em programação usando python!
-** TODO Para *aprender* é necessário *quase* saber! [0/15]
+** TODO Para *aprender* é necessário *quase* saber [0/15]
 *** TODO Recadinhos [0/6]
-- [ ] Obrigado pela presença. Não se assuste com isso aqui!
-- [ ] Reflexões sobre a ontologia de perguntas bobas.
-- [ ] Apresentação baseada no livro *[[http://learnpythonthehardway.org/]]*
-- [ ] Esse aqui é o *[[https://matehackers.org]]*!
-- [ ] Feedback apreciado. Bônus points for meanies.
-- [ ] Pra aprender é necessário quase saber!
+    - [ ] Obrigado pela presença. Não se assuste com isso aqui!
+    - [ ] Reflexões sobre a ontologia de perguntas bobas.
+    - [ ] Apresentação baseada no livro *[[http://learnpythonthehardway.org/]]*
+    - [ ] Esse aqui é o *[[https://matehackers.org]]*!
+    - [ ] Feedback apreciado. Bônus points for meanies.
+    - [ ] Pra aprender é necessário quase saber!
 
 *** TODO Um breve devaneio sobre a linha de comando [0/3]
-- [ ] Texto é a melhor interface.
-  1. Eficiente
-  2. Maior denominador comum entre seres humanos e computadores.
-  3. Baixa complexidade.
+    - [ ] Texto é a melhor interface.
+      1. Eficiente
+      2. Maior denominador comum entre seres humanos e computadores.
+      3. Baixa complexidade.
 
-- [ ] Comandos básicos
-  1. *cd*: "change directory" - troca o diretório atual
-  2. *ls:* "list" - lista o conteúdo do diretório
-  3. *mkdir*: "make directory" - cria um novo diretório
-  4. *pwd*: "print working directory" - mostra o diretório atual
+    - [ ] Comandos básicos
+      1. *cd*: "change directory" - troca o diretório atual
+      2. *ls:* "list" - lista o conteúdo do diretório
+      3. *mkdir*: "make directory" - cria um novo diretório
+      4. *pwd*: "print working directory" - mostra o diretório atual
 
-- [ ] Novos apelidos para velhos amigos
-  1. Você pode chamar o =diretório atual= de =.=
-  2. Você pode chamar o =diretório acima do autal= de =..=
-  3. Você pode chamar o diretório =/home/<SEU NOME DE USUÁRIO= de =~=
-  4. Você pode chamar o =diretório raíz= de =/=. Todos os outros
-     diretórios estão abaixo dele.
+    - [ ] Novos apelidos para velhos amigos
+      1. Você pode chamar o =diretório atual= de =.=
+      2. Você pode chamar o =diretório acima do autal= de =..=
+      3. Você pode chamar o diretório =/home/<SEU NOME DE USUÁRIO= de =~=
+      4. Você pode chamar o =diretório raíz= de =/=. Todos os outros
+         diretórios estão abaixo dele.
 
-- Exemplos:
+    - Exemplos:
 
-  #+BEGIN_SRC sh
-  ls ~
-  #+END_SRC
+      #+BEGIN_SRC sh
+        ls ~
+      #+END_SRC
 
-  #+RESULTS:
-  | bin              |
-  | docs             |
-  | mnt              |
-  | music            |
-  | pics             |
-  | src              |
-  | texmf            |
-  | tp-src           |
-  | virtual-machines |
+      #+RESULTS:
+      | bin              |
+      | docs             |
+      | mnt              |
+      | music            |
+      | pics             |
+      | src              |
+      | texmf            |
+      | tp-src           |
+      | virtual-machines |
 
-  #+BEGIN_SRC sh
-  ls .
-  #+END_SRC
+      #+BEGIN_SRC sh
+        ls .
+      #+END_SRC
 
-  #+RESULTS:
-  | arquivo.txt          |
-  | primeiros_passos.org |
+      #+RESULTS:
+      | arquivo.txt          |
+      | primeiros_passos.org |
 
-- [ ] Exercício:
-  - Criar um diretório no pasta *home* do seu usuário chamada
-    *programacao* usando a linha de comando.
+    - [ ] Exercício:
+      - Criar um diretório no pasta *home* do seu usuário chamada
+        *programacao* usando a linha de comando.
 
 *** TODO Primeiro programa: *Helo World*! [0/5]
 
- - Criando um programa em python do zero!
+    - Criando um programa em python do zero!
 
- - [ ] Criando um arquivo texto: *[[file+emacs:arquivo.txt][arquivo.txt]]*
- - O que acontece quando outros programas abrem este arquivo?
-   1. *firefox arquivo.txt*
-   2. *python arquivo.txt*
+    - [ ] Criando um arquivo texto: *[[file+emacs:arquivo.txt][arquivo.txt]]*
+    - O que acontece quando outros programas abrem este arquivo?
+      1. *firefox arquivo.txt*
+      2. *python arquivo.txt*
 
- - [ ] Fazendo algo útil?
-   - Modificando o arquivo.txt: *import this*
+    - [ ] Fazendo algo útil?
+      - Modificando o arquivo.txt: *import this*
 
- - [ ] Renomeando o *arquivo.txt* para *programa.py*
-   1. *MV*: "move" - move ou renomeia arquivos
+    - [ ] Renomeando o *arquivo.txt* para *programa.py*
+      1. *MV*: "move" - move ou renomeia arquivos
 
- - [ ] O seu primeiro comando em python: =print()=
-   + =print("Hello World")=
+    - [ ] O seu primeiro comando em python: =print()=
+      + =print("Hello World")=
 
- - [ ] Exercício:
-   - Modificar o programa.py e deixar somente a linha: =print("Hello World")=
+    - [ ] Exercício:
+      - Modificar o programa.py e deixar somente a linha: =print("Hello World")=
 
-*** TODO Fazendo de conta?
- - Operações aritméticas
+*** TODO Fazendo de conta? [0/2]
+    * [ ] A primeira coisa interessante que pode ser feita com uma
+      linguagem de programação são operações aritiméticas.
+      * Adição: =+=
+      * Subtração: =-=
+      * Multiplicação: =*=
+      * Divisão: =/=
+      * Menor que: =<=
+      * Maior que: =>=
+      * Menor ou igual: =<==
+      * Maior ou igual: =>==
+      * Igual: =
+    * [ ] Exemplos
+
+    #+BEGIN_SRC python :results output
+      print(2+2)
+      print(9/2)
+      print(9/2.5)
+      print(1*7)
+      print(-5-(-2))
+      print(10>9)
+      print(15<12)
+      print(15<=15)
+    #+END_SRC
+
+    #+RESULTS:
+    : 4
+    : 4.5
+    : 4.5
+    : 7
+    : -3
+    : True
+    : False
+    : True
 
 *** TODO Lembrando o passado.
- - Uso de variáveis e memória.
+    - Uso de variáveis e memória.
 
 *** TODO Processando textões.
- - Como lidar com strings.
+    - Como lidar com strings.
 
 *** TODO Como interagir com o mundo externo.
- - Fazendo perguntas ao usuário.
+    - Fazendo perguntas ao usuário.
 
 *** TODO Não se -reprima-, digo, repita.
- - Trabalhando com funções.
+    - Trabalhando com funções.
 
 *** TODO A verdade está no interpretador.
- - Usando o arquivo x.
+    - Usando o arquivo x.
 
 *** TODO É Lógico.
- - Introdução a aritimética booleana.
+    - Introdução a aritimética booleana.
 
 *** TODO Ta na hora de tomar uma decisão.
- - IF o curso for bom THEN eu vou.
+    - IF o curso for bom THEN eu vou.
 
 *** TODO O mundo da loops.
- - FOR e WHILE.
+    - FOR e WHILE.
 
 *** TODO Isso aqui já não é uma lista?
- - Listas e Dicionários
+    - Listas e Dicionários
 
 *** TODO Eu me identifico como um objeto.
- - Princípios da Orientação a
+    - Princípios da Orientação a
 *** TODO Vai planeta
