@@ -6,14 +6,16 @@
 
 * Os primeiros passos em programação usando python!
 ** TODO Para *aprender* é necessário *quase* saber [0/15]
-*** TODO Recadinhos [0/6]
+\*** TODO Recadinhos [0/6]
     - [ ] Obrigado pela presença. Não se assuste com isso aqui!
+
+        [[file:matehackers-logo-vetor.jpg]]
+
     - [ ] Reflexões sobre a ontologia de perguntas bobas.
     - [ ] Apresentação baseada no livro *[[http://learnpythonthehardway.org/]]*
     - [ ] Esse aqui é o *[[https://matehackers.org]]*!
     - [ ] Feedback apreciado. Bônus points for meanies.
     - [ ] Pra aprender é necessário quase saber!
-
 *** TODO Um breve devaneio sobre a linha de comando [0/3]
     - [ ] Texto é a melhor interface.
       1. Eficiente
@@ -97,7 +99,7 @@
       * Igual: =
     * [ ] Exemplos
 
-    #+BEGIN_SRC python :results output
+    #+BEGIN_SRC python :results output :tangle code.py
       print(2+2)
       print(9/2)
       print(9/2.5)
@@ -118,9 +120,42 @@
     : False
     : True
 
-*** TODO Lembrando o passado.
+*** TODO Lembrando o passado. [0/2]
     - Uso de variáveis e memória.
+    - [ ] Aparentemente computadores conseguem lembrar das coisas!
+    - [ ] Existe um comando especial em python para lembrar das
+      coisas:
+      =<NOME> = <COISA A SER LEMBRADA>=
+    - Exemplos:
 
+      #+BEGIN_SRC python :results output :tangle code.py
+        my_name = 'Zed A. Shaw'
+        my_age = 35 # not a lie
+        my_height = 74 # inches
+        my_weight = 180 # lbs
+        my_eyes = 'Blue'
+        my_teeth = 'White'
+        my_hair = 'Brown'
+
+        print("Let's talk about %s." % my_name)
+        print("He's %d inches tall." % my_height)
+        print("He's %d pounds heavy." % my_weight)
+        print("Actually that's not too heavy.")
+        print("He's got %s eyes and %s hair." % (my_eyes, my_hair))
+        print("His teeth are usually %s depending on the coffee." % my_teeth)
+
+        # this line is tricky, try to get it exactly right
+        print("If I add %d, %d, and %d I get %d." % (my_age, my_height, my_weight, my_age + my_height + my_weight))
+      #+END_SRC
+
+      #+RESULTS:
+      : Let's talk about Zed A. Shaw.
+      : He's 74 inches tall.
+      : He's 180 pounds heavy.
+      : Actually that's not too heavy.
+      : He's got Blue eyes and Brown hair.
+      : His teeth are usually White depending on the coffee.
+      : If I add 35, 74, and 180 I get 289.
 *** TODO Processando textões.
     - Como lidar com strings.
 
