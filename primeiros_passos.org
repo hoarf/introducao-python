@@ -1,12 +1,14 @@
-#+TITLE:  Primeiros Passos em Python
+#+TITLE:  Curso de programação em python para iniciantes.
 #+AUTHOR: Alan Ficagna
 #+EMAIL:  alan.ficagna@gmail.com
 #+DATE:   2016 Jun 26
-#+TAGS: apresentação
+#+TAGS: :presentation: :python: :intro:
 
 * Os primeiros passos em programação usando python!
 ** TODO Para *aprender* é necessário *quase* saber [0/15]
-\*** TODO Recadinhos [0/6]
+
+*** TODO Recadinhos [0/6]
+
     - [ ] Obrigado pela presença. Não se assuste com isso aqui!
 
         [[file:matehackers-logo-vetor.jpg]]
@@ -16,7 +18,10 @@
     - [ ] Esse aqui é o *[[https://matehackers.org]]*!
     - [ ] Feedback apreciado. Bônus points for meanies.
     - [ ] Pra aprender é necessário quase saber!
+
+      EATDXQVDOSA
 *** TODO Um breve devaneio sobre a linha de comando [0/3]
+
     - [ ] Texto é a melhor interface.
       1. Eficiente
       2. Maior denominador comum entre seres humanos e computadores.
@@ -86,6 +91,7 @@
       - Modificar o programa.py e deixar somente a linha: =print("Hello World")=
 
 *** TODO Fazendo de conta? [0/2]
+
     * [ ] A primeira coisa interessante que pode ser feita com uma
       linguagem de programação são operações aritiméticas.
       * Adição: =+=
@@ -100,6 +106,7 @@
     * [ ] Exemplos
 
     #+BEGIN_SRC python :results output :tangle code.py
+
       print(2+2)
       print(9/2)
       print(9/2.5)
@@ -108,6 +115,7 @@
       print(10>9)
       print(15<12)
       print(15<=15)
+
     #+END_SRC
 
     #+RESULTS:
@@ -121,46 +129,84 @@
     : True
 
 *** TODO Lembrando o passado. [0/2]
-    - Uso de variáveis e memória.
+
     - [ ] Aparentemente computadores conseguem lembrar das coisas!
-    - [ ] Existe um comando especial em python para lembrar das
+    - [  Existe um comando especial em python para lembrar das
       coisas:
       =<NOME> = <COISA A SER LEMBRADA>=
     - Exemplos:
 
-      #+BEGIN_SRC python :results output :tangle code.py
-        my_name = 'Zed A. Shaw'
-        my_age = 35 # not a lie
-        my_height = 74 # inches
-        my_weight = 180 # lbs
-        my_eyes = 'Blue'
-        my_teeth = 'White'
-        my_hair = 'Brown'
+      #+BEGIN_SRC python :results output :tangle code.py :session strings
 
-        print("Let's talk about %s." % my_name)
-        print("He's %d inches tall." % my_height)
-        print("He's %d pounds heavy." % my_weight)
-        print("Actually that's not too heavy.")
-        print("He's got %s eyes and %s hair." % (my_eyes, my_hair))
-        print("His teeth are usually %s depending on the coffee." % my_teeth)
+        # Uso de variáveis e memória.
 
-        # this line is tricky, try to get it exactly right
-        print("If I add %d, %d, and %d I get %d." % (my_age, my_height, my_weight, my_age + my_height + my_weight))
-      #+END_SRC
+        my_name = "Alan"
+        my_age = 31
+        my_height = 1.79 # metros
+        my_weight = 80 # kilos
+        my_eyes = "Castanhos"
+        my_hair = "Escuros"
+
+        print()
+        print(my_name)
+        print(my_height)
+        print(my_hair)
+        print(my_weight)
+
+    #+END_SRC
 
       #+RESULTS:
-      : Let's talk about Zed A. Shaw.
-      : He's 74 inches tall.
-      : He's 180 pounds heavy.
-      : Actually that's not too heavy.
-      : He's got Blue eyes and Brown hair.
-      : His teeth are usually White depending on the coffee.
-      : If I add 35, 74, and 180 I get 289.
-*** TODO Processando textões.
-    - Como lidar com strings.
+      :
+      : ... >>> >>> >>> >>> >>> >>> >>>
+      : Alan
+      : 1.79
+      : Escuros
+      : 80
+*** TODO Processando textões. [0/1]
 
-*** TODO Como interagir com o mundo externo.
-    - Fazendo perguntas ao usuário.
+    * [ ] - 'Você quis dizer "Springs" - Google'
+
+    #+BEGIN_SRC python :results output :tangle code.py :session strings
+
+      # Como lidar com strings.
+      # %d : use com digitos
+      # %s : use com strings
+      # %r : use quando você quer só uma _representação_ do valor
+      print("Vamos falar sobre %s" % my_name)
+      print("Eu tenho %d metros de altura" % my_height)
+      print("Ele pesa %d kilos" % my_weight)
+      print("Pra falar a verdade isso nem é muito pesado")
+      print("Ele tem os olhos %s e os cabelos %s" % (my_eyes, my_hair))
+
+      # Essa linha é complicada
+      print("Se eu somar %d, %d, e %d isso da %d." % (my_age, my_height, my_weight, my_age + my_height + my_weight))
+
+    #+END_SRC
+
+    #+RESULTS:
+    :
+    : ... ... ... ... Vamos falar sobre Alan
+    : Eu tenho 1 metros de altura
+    : Ele pesa 80 kilos
+    : Pra falar a verdade isso nem é muito pesado
+    : Ele tem os olhos Castanhos e os cabelos Escuros
+    : >>> ... Se eu somar 31, 1, e 80 isso da 112.
+
+*** TODO Como interagir com o mundo [0/1]
+
+    - [ ] Novo nome para lembrar =input=
+
+#+BEGIN_SRC python :results output :tangle code.py
+
+    # Fazendo perguntas ao usuário.
+    user_age = input("Quantos anos você tem ")
+    user_weight = input("Quanto você pesa ")
+    user_height = input("Quanto você mede ")
+    print("Então você tem %r anos, pesa %r kilos e mede %r metros!" % (user_age, user_weight, user_height))
+
+    * [ ] Exercício: Fazer um programa que pergunte o peso e a altura do usuário e devolva o Índice de Massa Corporál (SE VIREM)
+
+#+END_SRC
 
 *** TODO Não se -reprima-, digo, repita.
     - Trabalhando com funções.
