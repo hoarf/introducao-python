@@ -131,7 +131,7 @@
 *** TODO Lembrando o passado. [0/2]
 
     - [ ] Aparentemente computadores conseguem lembrar das coisas!
-    - [  Existe um comando especial em python para lembrar das
+    - [ ]  Existe um comando especial em python para lembrar das
       coisas:
       =<NOME> = <COISA A SER LEMBRADA>=
     - Exemplos:
@@ -139,7 +139,6 @@
       #+BEGIN_SRC python :results output :tangle code.py :session strings
 
         # Uso de variáveis e memória.
-
         my_name = "Alan"
         my_age = 31
         my_height = 1.79 # metros
@@ -147,7 +146,6 @@
         my_eyes = "Castanhos"
         my_hair = "Escuros"
 
-        print()
         print(my_name)
         print(my_height)
         print(my_hair)
@@ -157,8 +155,7 @@
 
       #+RESULTS:
       :
-      : ... >>> >>> >>> >>> >>> >>> >>>
-      : Alan
+      : ... >>> >>> >>> >>> >>> >>> >>> >>> >>> Alan
       : 1.79
       : Escuros
       : 80
