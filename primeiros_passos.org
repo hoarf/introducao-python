@@ -195,15 +195,18 @@
 
 #+BEGIN_SRC python :results output :tangle code.py
 
-    # Fazendo perguntas ao usuário.
-    user_age = input("Quantos anos você tem ")
-    user_weight = input("Quanto você pesa ")
-    user_height = input("Quanto você mede ")
-    print("Então você tem %r anos, pesa %r kilos e mede %r metros!" % (user_age, user_weight, user_height))
-
-    * [ ] Exercício: Fazer um programa que pergunte o peso e a altura do usuário e devolva o Índice de Massa Corporál (SE VIREM)
+  # Fazendo perguntas ao usuário.
+  user_age = input("Quantos anos você tem ")
+  user_weight = input("Quanto você pesa ")
+  user_height = input("Quanto você mede ")
+  print("Então você tem %r anos, pesa %r kilos e mede %r metros!" % (user_age, user_weight, user_height))
 
 #+END_SRC
+
+#+RESULTS:
+
+    * [ ] Exercício: Fazer um programa que pergunte o peso e a altura
+      do usuário e devolva o _Índice de Massa Corporal_ (SE VIREM)
 
 *** TODO Não se -reprima-, digo, repita.
     - Trabalhando com funções.
