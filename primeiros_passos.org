@@ -9,17 +9,34 @@
 
 *** TODO Recadinhos [0/6]
 
-    - [ ] Obrigado pela presença. Não se assuste com isso aqui!
+    - [ ] Obrigado pela presença!
 
         [[file:matehackers-logo-vetor.jpg]]
 
     - [ ] Reflexões sobre a ontologia de perguntas bobas.
     - [ ] Apresentação baseada no livro *[[http://learnpythonthehardway.org/]]*
     - [ ] Esse aqui é o *[[https://matehackers.org]]*!
+
+      "(...) Você nem imagina o progresso que cada dia me traz. E
+      quando você diz: 'Compartilhe comigo um pouco destes presentes
+      que você acha tão úteis', eu respondo que eu estou ancioso para
+      oferecer todos estes privilégios sobre você, e que eu fico
+      contente em aprender, para que eu possa ensinar.
+
+      Nada vai me satisfazer, não importa o quão excelente e benéfico,
+      se eu devo reter o conhecimento sobre tal coisa para mim. E se
+      sabedoria me for dada, sob a expressa condição de que deve ser
+      mantida escondida e não pronunciada, eu recusarei.
+
+      Nenhuma boa coisa é agradável de possuir, sem amigos para
+      compartilhá-la."
+
+      - *Sêneca*, 4BC~64AD
+
     - [ ] Feedback apreciado. Bônus points for meanies.
     - [ ] Pra aprender é necessário quase saber!
+    - [ ] Case in point: EATDXQVDOSA
 
-      EATDXQVDOSA
 *** TODO Um breve devaneio sobre a linha de comando [0/3]
 
     - [ ] Texto é a melhor interface.
@@ -131,7 +148,7 @@
 *** TODO Lembrando o passado. [0/2]
 
     - [ ] Aparentemente computadores conseguem lembrar das coisas!
-    - [ ]  Existe um comando especial em python para lembrar das
+    - [ ] Existe um comando especial em python para lembrar das
       coisas:
       =<NOME> = <COISA A SER LEMBRADA>=
     - Exemplos:
@@ -155,13 +172,15 @@
 
       #+RESULTS:
       :
-      : ... >>> >>> >>> >>> >>> >>> >>> >>> >>> Alan
+      : ... >>> >>> >>> >>> >>> >>> >>> Alan
       : 1.79
       : Escuros
       : 80
 *** TODO Processando textões. [0/1]
 
-    * [ ] - 'Você quis dizer "Springs" - Google'
+    * [ ] - 'Você quis dizer "Springs" - Google' (Novo nome para
+      lembrar: =Strings=
+    * [ ] Strings são sequências de caracteres entre aspas.
 
     #+BEGIN_SRC python :results output :tangle code.py :session strings
 
@@ -195,6 +214,7 @@
 
 #+BEGIN_SRC python :results output :tangle code.py
 
+  # --- Needs a dedicated buffer ---
   # Fazendo perguntas ao usuário.
   user_age = input("Quantos anos você tem ")
   user_weight = input("Quanto você pesa ")
@@ -203,29 +223,186 @@
 
 #+END_SRC
 
-#+RESULTS:
-
     * [ ] Exercício: Fazer um programa que pergunte o peso e a altura
       do usuário e devolva o _Índice de Massa Corporal_ (SE VIREM)
 
-*** TODO Não se -reprima-, digo, repita.
-    - Trabalhando com funções.
+    * [ ] Exercício: Fazer um programa que pergunte o peso e a altura
+      e devolva quantas pessoas dessa altura eu preciso empilhar pra
+      chegar até a lua. Diga também quantas pessoas são necessárias
+      para chegar no peso da lua.
 
-*** TODO A verdade está no interpretador.
-    - Usando o arquivo x.
+*** TODO Não se -reprima-, digo, repita. [0/4]
 
-*** TODO É Lógico.
+    * [ ] Dilema #1: Humanos não gostam de fazer trabalho repetitvo.
+    * [ ] Dilema #2: Humanos tem uma memória de curto prazo pequena.
+    * [ ] Solução: =Compartimentalizar= (Funções)
+
+#+BEGIN_SRC python :results output :tangle code.py
+
+  # exemplo de chamada de função
+  print("Hello World")
+
+  # exemplo de definição de função
+  def minha_funcao(mensagem):
+    print("Esta é minha mensagem: %s" % mensagem)
+
+  # como chamar a função que você definiu?
+  minha_funcao("FUNCAOOOOOO SAO DO CORASSSAUUUMMM")
+
+ #+END_SRC
+
+#+RESULTS:
+: Hello World
+: Esta é minha mensagem: FUNCAOOOOOO SAO DO CORASSSAUUUMMM
+
+    * [ ] Exercício: Modificar o código anterior e remover as partes
+      repetidas.
+
+*** TODO É Lógico. [0/6]
+
     - Introdução a aritimética booleana.
+    - [ ] O que é lógica?
+    - [ ] O que são =tipos de dados?=
+      - [ ] Exemplos de tipos de dados:
+        - [ ] Números: *1, 2, -10, 3.0*
+        - [ ] Strings: "Yellow Submarine"
+        - [ ] =Booleans= : True, False
+    - [ ] Operadores lógicos em python e suas =Tabelas verdades=
+    - [ ] =AND=
 
-*** TODO Ta na hora de tomar uma decisão.
-    - IF o curso for bom THEN eu vou.
+      | A     | B     | A and B |
+      |-------+-------+---------|
+      | True  | True  | True    |
+      | True  | False | False   |
+      | False | True  | False   |
+      | False | False | False   |
 
-*** TODO O mundo da loops.
-    - FOR e WHILE.
+    - [ ] =OR=
 
-*** TODO Isso aqui já não é uma lista?
-    - Listas e Dicionários
+      | A     | B     | A or B |
+      |-------+-------+--------|
+      | True  | True  | True   |
+      | True  | False | False  |
+      | False | True  | False  |
+      | False | False | False  |
 
-*** TODO Eu me identifico como um objeto.
-    - Princípios da Orientação a
+    - [ ] =NOT=
+
+      | A     | not A |
+      |-------+-------|
+      | True  | False |
+      | False | True  |
+
+    - [ ] Examples:
+
+#+BEGIN_SRC python :results output :tangle code.py :session booleans
+eu_nasci_ontem = True
+voce_consegue_me_enganar = False
+
+print(eu_nasci_ontem and voce_consegue_me_enganar)
+print(eu_nasci_ontem or voce_consegue_me_enganar)
+print(eu_nasci_ontem and not voce_consegue_me_enganar)
+#+END_SRC
+
+#+RESULTS:
+:
+: >>> >>> False
+: True
+: True
+
+*** TODO Ta na hora de tomar uma decisão. [/]
+   - [ ] =IF= o curso for bom =THEN= eu vou.
+
+#+BEGIN_SRC python :results output :tangle code.py :session booleans
+if eu_nasci_ontem:
+    print("Nossa cara, que novo vc")
+else:
+    print("Nem eu")
+#+END_SRC
+
+#+RESULTS:
+:
+: ... ... ... Nossa cara, que novo vc
+
+*** TODO O mundo da loops. [/]
+    - [ ] Novo problema: Humanos não gostam de escrever um comando de cada vez.
+
+      [[file:bart.gif]]
+
+    - [ ] Duas maneiras de resolver o problema: =FOR= e =WHILE=
+    - [ ] =FOR= executa um comando por um número de vezes finita.
+    - [ ] =WHILE= executa um comando enquanto uma expressão for =True=
+    - [ ] Exercício: (Escrever um simulador de Bart Simpson. (Imprimir
+      100 vezes na tela: "Family Guy é melhor que Simpsons")
+    - [ ] Nova função: =range(n)= - retorna uma lista de valores de 0
+      até n.
+
+#+BEGIN_SRC python :results output :tangle code.py :session booleans
+# Com o for
+
+for i in range(5):
+    print("Simpsons é melhor que Family Guy")
+
+# Com o while
+contador = 0
+while contador < 5:
+    print("Family Guy é melhor que Simpsons")
+    contador = contador + 1
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+
+>>> ... ... Simpsons é melhor que Family Guy
+Simpsons é melhor que Family Guy
+Simpsons é melhor que Family Guy
+Simpsons é melhor que Family Guy
+Simpsons é melhor que Family Guy
+... >>> ... ... ... Family Guy é melhor que Simpsons
+Family Guy é melhor que Simpsons
+Family Guy é melhor que Simpsons
+Family Guy é melhor que Simpsons
+Family Guy é melhor que Simpsons
+#+end_example
+
+*** TODO Listas [0/4]
+
+    - [ ] Agrupar coisas em sequências é extremamente útil: Permite tratar
+      muitas coisas como uma só
+
+    - [ ] range() cria uma lista
+
+    - [ ] Uma lista esta declarada da seguinte forma:
+
+#+BEGIN_SRC python :results output :tangle code.py :session booleans
+
+lista_vazia = []
+lista_de_amigos = [ "Pedro", "Maria", "João" ]
+lista_de_idades = [ 24, 23, 33 ]
+
+for idade in lista_de_idades:
+    for amigo in lista_de_amigos:
+         print("Meu amigo %s tem %s anos." % (amigo, idade))
+
+#+END_SRC
+
+#+RESULTS:
+#+begin_example
+
+>>> >>> >>> >>> ... ... ... Meu amigo Pedro tem 24 anos.
+Meu amigo Maria tem 24 anos.
+Meu amigo João tem 24 anos.
+Meu amigo Pedro tem 23 anos.
+Meu amigo Maria tem 23 anos.
+Meu amigo João tem 23 anos.
+Meu amigo Pedro tem 33 anos.
+Meu amigo Maria tem 33 anos.
+Meu amigo João tem 33 anos.
+#+end_example
+
+    - [ ] Exercício: Criar uma lista de gêneros e corrigir o programa
+      acima para que ele diga "Meu amigo" e "Minha amiga"
+
+*** TODO Arquivos
+*** TODO Comunidade
 *** TODO Vai planeta
