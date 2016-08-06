@@ -6,7 +6,6 @@
 
 * Os primeiros passos em programação usando python!
 ** TODO Para *aprender* é necessário *quase* saber [0/15]
-
 *** TODO Recadinhos [0/6]
 
     - [ ] Obrigado pela presença!
@@ -310,8 +309,8 @@ print(eu_nasci_ontem and not voce_consegue_me_enganar)
 : True
 : True
 
-*** TODO Ta na hora de tomar uma decisão. [/]
-   - [ ] =IF= o curso for bom =THEN= eu vou.
+*** TODO Ta na hora de tomar uma decisão. [0/1]
+   - [ ] SE o curso for bom ENTÃO eu vou senão eu não vou.
 
 #+BEGIN_SRC python :results output :tangle code.py :session booleans
 if eu_nasci_ontem:
@@ -401,8 +400,56 @@ Meu amigo João tem 33 anos.
 #+end_example
 
     - [ ] Exercício: Criar uma lista de gêneros e corrigir o programa
-      acima para que ele diga "Meu amigo" e "Minha amiga"
+      acima para que ele diga "Meu amigo..." e "Minha amiga..." corretamente.
 
-*** TODO Arquivos
-*** TODO Comunidade
-*** TODO Vai planeta
+*** TODO Arquivos [0/5]
+    - [ ] Arquivos são uma outra maneira de interagir com o mundo
+      externo.
+
+    - [ ] Na prática, tudo é um arquivo.
+
+    - [ ] Arquivos possuem um ciclo de vida natural que *deve* ser
+      respeitado: Abrir -> Ler/Escrever -> *Fechar*
+
+    - [ ] Duas funções básicas: =read() e write()=
+
+    - [ ] Exemplo:
+
+#+BEGIN_SRC python :results output
+
+with open('arquivo.txt') as f:
+    print(f.readline())
+
+with open('arquivo.txt', 'w') as f:
+    f.write("Nananana")
+
+#+END_SRC
+
+#+RESULTS:
+: Nananana
+
+#+BEGIN_SRC python :results output
+import os
+
+for dirpath, dirname, filenames in os.walk('.'):
+    print(dirpath, filenames)
+
+#+END_SRC
+
+*** TODO Comunidade [0/2]
+
+   - [ ] Excelente comunidade com muito código aberto.
+
+   - [ ] Exemplo
+
+#+BEGIN_SRC python :results output
+import requests
+
+r = requests.get("https://matehackers.org")
+#+END_SRC
+
+#+RESULTS:
+
+*** TODO Vai planeta [0/1]
+
+   - [ ] VOCÊ CHEGOU ATÉ AQUI! PARABÉNS!
